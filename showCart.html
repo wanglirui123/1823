@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+
+<!-- 依赖的工具库 jquery  -->
+<script src="./javascripts/libs/jquery.js"></script>
+<!-- 插件 -->
+<script src="./javascripts/libs/jquery.cookie.js"></script>
+<script src="./javascripts/libs/art-template.js"></script>
+<!-- 独立的业务逻辑 -->
+<script>
+// 获取到当前的数据;
+// 获取cookie内容;
+
+function getCookieJson(){
+      if(! $.cookie("carts")){ 
+            alert("购物车空空如也");
+            history.go(-1);
+      }
+      var cartsList = JSON.parse($.cookie("carts"));
+      console.log(cartsList);
+}
+
+getCookieJson();
+</script>
+</body>
+</html>
